@@ -1,23 +1,18 @@
 package application;
 
-import java.util.Date;
-
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
-import model.entities.Department;
 import model.entities.Seller;
 
 public class Program {
 
 	public static void main(String[] args) {
 		
-		Department obj = new Department(1, "Books");
-		
-		Seller seller = new Seller(24, "Cleitin", "cleitinbomba@gmail.com", new Date(), 3000.00, obj);
-		
 		//injeção de dependêcia
 		SellerDao sellerDao = DaoFactory.createSellerDao();
-		
+
+		System.out.println("=== 1º TEST: Seller find by ID ===");
+		Seller seller = sellerDao.findById(3);
 		System.out.println(seller);
 
 	}
