@@ -39,8 +39,13 @@ public class Program {
 		System.out.println("\n=== 5º TEST: Seller update ===");
 		seller = sellerDao.findById(8);
 		seller.setName("Clebinho Bomba");
+		seller.setEmail("clebinhobomba@gmail.com");
 		sellerDao.update(seller);
 		System.out.println("Update completed! ");
+		
+		System.out.println("\n=== 6º TEST: Seller update ===");
+		sellerDao.deleteById(10);
+		sellerDao.deleteById(11);
 		
 	}
 
