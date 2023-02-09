@@ -25,7 +25,7 @@ public class Program {
 			System.out.println(obj);
 		}
 
-		System.out.println("\n=== 3º TEST: Seller find by Department ===");
+		System.out.println("\n=== 3º TEST: Seller find all ===");
 		list = sellerDao.findAll();
 		for (Seller obj : list) {
 			System.out.println(obj);
@@ -43,9 +43,10 @@ public class Program {
 		sellerDao.update(seller);
 		System.out.println("Update completed! ");
 		
-		System.out.println("\n=== 6º TEST: Seller update ===");
+		System.out.println("\n=== 6º TEST: Seller delete ===");
 		sellerDao.deleteById(10);
 		sellerDao.deleteById(11);
+		System.out.println("Delete completed! ");
 		
 	}
 
